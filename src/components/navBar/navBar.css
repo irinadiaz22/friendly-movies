@@ -1,0 +1,36 @@
+nav {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    
+}
+.logoImg {
+    width: 80px;
+    height: 80px;
+}
+h1 {
+    font-size: 30px;
+}
+.navLiks {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    
+}
+li {
+    padding: 20px
+    
+}
+.login {
+    position: fixed;
+    right: 0;
+    padding: 20px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+.login {
+    display: flex;
+    align-items: center;
+}
