@@ -1,15 +1,18 @@
 import "./home.css";
+
 import { NavBar } from "../../components/navBar/NavBar";
 import { Sidebar } from "../../components/sidebar/Sidebar";
+import { Footer } from "../../components/footer/Footer"
 
 export const Home = () => {
   return (
     <>
+    
       <main className="content">
         <NavBar />
 
         <div className="BodyHome">
-          <Sidebar />
+          <Sidebar className="sideClass" />
           <div className="hero">
             <h1>Vívelo como en el cine</h1>
             <p>
@@ -22,9 +25,9 @@ export const Home = () => {
               <button className="bntSecondary">Iniciar Sesión</button>
             </div>
           </div>
-          <div></div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

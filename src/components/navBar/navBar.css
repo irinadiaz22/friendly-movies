@@ -1,36 +1,40 @@
 nav {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    
+  display: flex;
+  align-items: center;
+  height: 60px;
 }
 .logoImg {
-    width: 80px;
-    height: 80px;
+  width: 80px;
+  height: 80px;
 }
 h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 .navLiks {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
 li {
-    padding: 20px
-    
+  padding: 20px;
 }
 .login {
-    position: fixed;
-    right: 0;
-    padding: 20px;
+  position: fixed;
+  right: 0;
+  padding: 20px;
 }
 .icon {
   width: 30px;
   height: 30px;
 }
 .login {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+Link {
+  color: #e50914;
+}
+li:hover {
+  color: #e50914;
+  background-color: #380205;
 }

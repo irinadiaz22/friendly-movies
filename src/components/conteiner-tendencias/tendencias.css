@@ -1,0 +1,17 @@
+.movie-tendencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+li {
+    padding: 10px;
+    max-height: 210px;
+    max-width: 100px;
+}
+
+@media  ((max-width: 768px))
+{
+
+}

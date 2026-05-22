@@ -10,6 +10,7 @@ import "./sidebar.css";
 export const Sidebar = () => {
   return (
     <aside className="sideClass">
+
       <div className="sideItem">
         <HomeIcon className="icon" />
         <span>Home</span>
@@ -27,7 +28,8 @@ export const Sidebar = () => {
         <span>Catalogo</span>
       </div>
 
-      <div className="sideDownItems">
+      <div></div>
+      
         <div className="sideItem">
           <SettingsIcon className="icon" />
           <span>Settings</span>
@@ -36,7 +38,7 @@ export const Sidebar = () => {
           <LogoutIcon className="icon" />
           <span>Logout</span>
         </div>
-      </div>
+      
     </aside>
   );
 };

@@ -1,0 +1,28 @@
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 160px;
+    margin: 5px;
+    overflow: visible;
+}
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+.movie-card h3 {
+    font-size: 15px;
+    padding: 5px 0px;
+    padding-bottom: 0;
+    margin: 5px 0px;
+    color: #ffdad6;
+    margin: 0;
+}
+.movie-card h2 {
+    font-size: 25px;
+    padding: 5px 0px;
+    padding-bottom: 0;
+    margin: 5px 0px;
+    color: #ffdad6;
+}

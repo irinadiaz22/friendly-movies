@@ -1,0 +1,28 @@
+
+.footerClass {
+    display: none;    
+}
+
+.sideItem:hover {
+  color: #e50914;
+  background-color: #380205;
+}
+.sideItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 25px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+}
+@media (max-width: 768px) {
+   .footerClass {
+    display: flex;
+    width: 100%;    
+} 
+}

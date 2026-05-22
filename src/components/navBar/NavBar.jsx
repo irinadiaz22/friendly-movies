@@ -14,13 +14,10 @@ export const NavBar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/"></Link>
+            <Link to="/Catalogo">Catalogo</Link>
           </li>
           <li>
             <Link to="/">Trending</Link>
-          </li>
-          <li>
-            <Link to="/">Categorias</Link>
           </li>
           <li>
             <Link to="/">Busqueda</Link>

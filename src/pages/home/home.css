@@ -1,66 +1,73 @@
+.root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
 .content {
-    position:relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .BodyHome {
-    display: flex;
+  display: flex;
 }
 .hero {
-    width: 100%;
-    height: 100vh;
-    background-image: url("../../assets/img/screen.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/img/screen.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 60px;
-    color: #ffdad6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+  color: #ffdad6;
 }
 .hero h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
-.hero p{
-    font-size: 18px;
-    max-width: 450px;
-    margin-bottom: 30px;
-
+.hero p {
+  font-size: 18px;
+  max-width: 450px;
+  margin-bottom: 30px;
 }
 .buttons {
-    display: flex;
-    gap: 20 px;
+  display: flex;
+  gap: 20 px;
 }
-button{
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 10px;
+button {
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
 }
 .btnPrimary {
-    background-color: #e50914;
-    color: #ffdad6;
-    padding: 12px 24px; 
+  background-color: #e50914;
+  color: #ffdad6;
+  padding: 12px 24px;
 }
 .bntSecondary {
-    background-color: #ffdad6;;
-    color: #e50914;
+  background-color: #ffdad6;
+  color: #e50914;
 }
 
-
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 42px;
-    }
-  .content {
-    padding-bottom: 100px; /* espacio para el sidebar */
+  .root {
+    height: 100%;
+    width: 100%;
+    display: flex;
   }
-
+  .hero h1 {
+    font-size: 42px;
+  }
+  .sideClass {
+    visibility: hidden;
+  }
 }
