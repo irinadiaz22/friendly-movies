@@ -4,6 +4,7 @@ import FavoriteIcon from "../../assets/icons/navigation/favorite.svg?react";
 import SettingsIcon from "../../assets/icons/actions/settings.svg?react";
 import ListaIcon from "../../assets/icons/navigation/lista.svg?react";
 import LogoutIcon from "../../assets/icons/actions/settings.svg?react";
+import { Link } from "react-router-dom";
 
 import "./sidebar.css";
 
@@ -11,33 +12,34 @@ export const Sidebar = () => {
   return (
     <aside className="sideClass">
 
-      <div className="sideItem">
+      <Link to="/" className="sideItem">
         <HomeIcon className="icon" />
         <span>Home</span>
-      </div>
-      <div className="sideItem">
-        <ExploreIcon className="icon" />
-        <span>Busqueda</span>
-      </div>
-      <div className="sideItem">
-        <FavoriteIcon className="icon" />
-        <span>Favoritos</span>
-      </div>
-      <div className="sideItem">
+      </Link>
+      <Link to="/Catalogo" className="sideItem">
         <ListaIcon className="icon" />
         <span>Catalogo</span>
-      </div>
-
+      </Link>
+      
+      <Link className="sideItem">
+        <ExploreIcon className="icon" />
+        <span>Busqueda</span>
+      </Link>
+      <Link className="sideItem">
+        <FavoriteIcon className="icon" />
+        <span>Favoritos</span>
+      </Link>
+      
       <div></div>
       
-        <div className="sideItem">
+        <Link className="sideItem">
           <SettingsIcon className="icon" />
           <span>Settings</span>
-        </div>
-        <div className="sideItem">
+        </Link>
+        <Link className="sideItem">
           <LogoutIcon className="icon" />
           <span>Logout</span>
-        </div>
+        </Link>
       
     </aside>
   );

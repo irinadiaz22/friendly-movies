@@ -1,15 +1,15 @@
 import "./moviecard.css";
 
-export const MovieCard = () => {
+export const MovieCard = ({ movie }) => {
   return (
     <div>
       <article className="movie-card">
         <img
-          src="https://es.web.img3.acsta.net/medias/nmedia/18/69/57/03/20063918.jpg"
-          alt="Titulo de la pelicula"
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          alt={movie.title}
         />
-        <h3>El diablo viste de Prada </h3>
-        <h3>2026 - 4/5</h3>
+        <h3>{movie.title}</h3>
+        <h3>{movie.release_date ? movie.release_date.slice(0, 4) : "N/A"} - {parseInt(movie.vote_average)}/10 </h3>
 
       </article>
     </div>

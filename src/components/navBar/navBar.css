@@ -38,3 +38,13 @@ li:hover {
   color: #e50914;
   background-color: #380205;
 }
+
+@media (max-width: 768px) {
+  .navTitle {
+    display: none;
+  }
+  .logoImg {
+    max-width: 60px;
+    max-height: 60px;
+}
+}

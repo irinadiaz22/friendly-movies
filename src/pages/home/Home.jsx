@@ -3,6 +3,7 @@ import "./home.css";
 import { NavBar } from "../../components/navBar/NavBar";
 import { Sidebar } from "../../components/sidebar/Sidebar";
 import { Footer } from "../../components/footer/Footer"
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
@@ -21,8 +22,13 @@ export const Home = () => {
             </p>
 
             <div className="buttons">
-              <button className="btnPrimary">Ver Catálogo</button>
+              <Link to="/catalogo">
+                <button className="btnPrimary">Ver Catálogo</button>
+              </Link>
+           
               <button className="bntSecondary">Iniciar Sesión</button>
+
+              
             </div>
           </div>
         </div>

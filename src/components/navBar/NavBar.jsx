@@ -7,7 +7,7 @@ export const NavBar = () => {
   return (
     <nav>
       <img src= { Logo } alt="Movies" className="logoImg"/>
-      <h1>FriendlyMovies</h1>
+      <h1 className="navTitle">FriendlyMovies</h1>
       <div>
         <ul className="navLiks">
           <li>
@@ -15,9 +15,6 @@ export const NavBar = () => {
           </li>
           <li>
             <Link to="/Catalogo">Catalogo</Link>
-          </li>
-          <li>
-            <Link to="/">Trending</Link>
           </li>
           <li>
             <Link to="/">Busqueda</Link>

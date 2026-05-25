@@ -8,8 +8,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
-.movie-scroll {
+.movie-list{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
@@ -19,10 +18,15 @@
     overflow: visible;
     
 }
+
 h2{
     font-size: 20px;
     color: #ffdad6;
 }
+.infinite-trigger {
+  height: 1px;
+}
+
 
 @media  ((max-width: 768px)) {
 
