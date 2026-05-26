@@ -74,11 +74,8 @@ export const Catalogo = () => {
           <Sidebar className="sideClass" />
 
           <div className="conteiner">
-            <Tendencias />
-
+            <h1>Catalogo</h1>
             <section aria-label="Catalogo">
-              <h2>Catalogo</h2>
-
               <div className="busqueda">
                 <p>Buscar por:</p>
                 <select
@@ -93,7 +90,7 @@ export const Catalogo = () => {
                 <div className="txtbusqueda">
                   <input
                     type="text"
-                    placeholder="Selecciona tipo..."
+                    placeholder="Selecciona el tipo de búsqueda..."
                     value={searchText}
                     onChange={(e) => setSearchText(e.target.value)}
                   />

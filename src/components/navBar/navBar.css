@@ -1,7 +1,8 @@
 nav {
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 60px;  
+  background-color: #000;
 }
 .logoImg {
   width: 80px;

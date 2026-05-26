@@ -27,3 +27,15 @@ export const getMoviesTendencias = async () => {
         return [];
     }
 };
+
+export const getMovieById = async (id) => {
+    try {
+        const response = await fetch (`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
+        const data = await response.json();
+        return data;
+
+    } catch (error) {
+        console.error("Error al obtener la película", error);
+        return null;
+    }
+}
