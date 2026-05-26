@@ -26,7 +26,20 @@ h2{
 .infinite-trigger {
   height: 1px;
 }
-
+.busqueda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    color: #ffdad6;
+}
+.no-results {
+  text-align: center;
+  color: #ffdad6;
+  font-size: 2rem;
+  margin-top: 20px;
+}
 
 @media  ((max-width: 768px)) {
 

@@ -18,7 +18,7 @@ export const Tendencias = () => {
         <div>
             <section aria-label="Tendencias">
                             <h2>Tendencias</h2>
-                            <ul class="movie-tendencias">
+                            <ul className="movie-tendencias">
                                 {movies.map((movie) => (
                                     <li key={movie.id}>
                                         <MovieTcard movie={movie} />

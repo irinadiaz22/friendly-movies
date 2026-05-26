@@ -18,7 +18,7 @@ export const getMoviesTendencias = async () => {
         const data = await response.json();
 
         const sortedMovies = data.results.sort((a, b) => b.vote_average - a.vote_average);
-        const top5Movies = sortedMovies.slice(0, 6);
+        const top5Movies = sortedMovies.slice(0, 5);
 
         return top5Movies;
 

@@ -12,38 +12,60 @@ export const Catalogo = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
 
+  const [searchText, setSearchText] = useState("");
+  const [searchType, setSearchType] = useState("all");
+  const [filteredMovies, setFilteredMovies] = useState([]);
+
   const triggerRef = useRef(null);
 
   useEffect(() => {
     const loadMovies = async () => {
       const data = await getTopRatedMovies(page);
-      console.log(data);
-      setMovies(prev => [...prev, ...data]);
+      //console.log(data);
+      setMovies((prev) => [...prev, ...data]);
     };
 
     loadMovies();
   }, [page]);
 
   //scrol infinito
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                if (entries[0].isIntersecting) {
-                    setPage((prev) => prev + 1);
-                }
-            },
-            { threshold: 1 }
-        );
-
-        if (triggerRef.current) {
-            observer.observe(triggerRef.current);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setPage((prev) => prev + 1);
         }
-        
-        return () => {
-            observer.disconnect();
-        };
-    }, []);
-    
+      },
+      { threshold: 1 },
+    );
+
+    if (triggerRef.current) {
+      observer.observe(triggerRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  //busqueda
+  useEffect(() => {
+    let results = movies;
+    if (searchText.trim() !== "") {
+      if (searchType === "movie") {
+        results = movies.filter((m) =>
+          m.title.toLowerCase().includes(searchText.toLowerCase()),
+        );
+      } else if (searchType === "year") {
+        results = movies.filter((m) =>
+          m.release_date.slice(0, 4).includes(searchText),
+        );
+      }
+    }
+
+    setFilteredMovies(results);
+  }, [searchText, searchType, movies]);
+
   return (
     <>
       <main className="content">
@@ -55,19 +77,43 @@ export const Catalogo = () => {
             <Tendencias />
 
             <section aria-label="Catalogo">
-                
               <h2>Catalogo</h2>
-              <ul class="movie-scroll">
 
-                <div key={movies.id} className="movie-list">
-                    {movies.map((movie) => (
-                        <MovieCard key={movie.id} movie={movie} />
+              <div className="busqueda">
+                <p>Buscar por:</p>
+                <select
+                  value={searchType}
+                  onChange={(e) => setSearchType(e.target.value)}
+                >
+                  <option value="all">Todos</option>
+                  <option value="movie">Película</option>
+                  <option value="year">Año</option>
+                </select>
+
+                <div className="txtbusqueda">
+                  <input
+                    type="text"
+                    placeholder="Selecciona tipo..."
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
+                  />
+                </div>
+              </div>
+
+              {filteredMovies.length === 0 ? (
+                <p className="no-results">No se encontraron resultados</p>
+              ) : (
+                <ul className="movie-scroll">
+                  <div className="movie-list">
+                    {filteredMovies.map((movie) => (
+                      <MovieCard movie={movie} />
                     ))}
-                </div>
-              </ul>
-                <div ref={triggerRef} className="infinite-trigger">  
-                    <p>Loading...</p>
-                </div>
+                  </div>
+                </ul>
+              )}
+              <div ref={triggerRef} className="infinite-trigger">
+                <p>Loading...</p>
+              </div>
             </section>
           </div>
         </div>
