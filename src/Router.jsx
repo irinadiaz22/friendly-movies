@@ -5,7 +5,7 @@ import { Catalogo } from './pages/catalogo/Catalogo.jsx'
 import { Favoritos } from './pages/favoritos/Favoritos.jsx'
 import { Busqueda } from './pages/busqueda/Busqueda.jsx'
 import { FichaPelicula } from './pages/fichaPelicula/FichaPelicula.jsx';
-
+import { LoginPage } from './pages/login/LoginPage.jsx';
 
 const Router = () => {
   return (
@@ -16,6 +16,8 @@ const Router = () => {
         <Route path="/Busqueda" element={<Busqueda />} />
         <Route path="/Favoritos" element={<Favoritos />} />
         <Route path="/pelicula/:id" element={<FichaPelicula />} />
+        <Route path="/login" element={<LoginPage />} />
+
       </Routes>
     </BrowserRouter>
   );

@@ -1,12 +1,12 @@
-import Logo from "../../assets/img/Logo.png"
+import Logo from "../../assets/img/Logo.png";
 import { Link } from "react-router-dom";
-import PersonIcon from "../../assets/icons/navigation/person.svg?react"
-import "./navBar.css"
+import PersonIcon from "../../assets/icons/navigation/person.svg?react";
+import "./navBar.css";
 
 export const NavBar = () => {
   return (
     <nav>
-      <img src= { Logo } alt="Movies" className="logoImg"/>
+      <img src={Logo} alt="Movies" className="logoImg" />
       <h1 className="navTitle">FriendlyMovies</h1>
       <div>
         <ul className="navLiks">
@@ -16,15 +16,15 @@ export const NavBar = () => {
           <li>
             <Link to="/Catalogo">Catalogo</Link>
           </li>
-        
-          
-
+          <li>
+            <Link to="/Favoritos">Favoritos</Link>
+          </li>
         </ul>
       </div>
-                      
+
       <div className="login">
         <PersonIcon className="icon" />
-        <Link to="/">Login</Link>
+        <Link to="/Login">Login</Link>
       </div>
     </nav>
   );
