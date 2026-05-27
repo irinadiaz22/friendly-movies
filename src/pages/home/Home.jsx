@@ -2,13 +2,19 @@ import "./home.css";
 
 import { NavBar } from "../../components/navBar/NavBar";
 import { Sidebar } from "../../components/sidebar/Sidebar";
-import { Footer } from "../../components/footer/Footer"
+import { Footer } from "../../components/footer/Footer";
 import { ButCatalog } from "../../components/bottons/ButCatalog";
+import { ButLogin } from "../../components/bottons/ButLogin";
 
 export const Home = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (user?.logged) {
+    console.log("Usuario logueado:", user.email);
+  }
+
   return (
     <>
-    
       <main className="content">
         <NavBar />
 
@@ -23,11 +29,9 @@ export const Home = () => {
 
             <div className="buttons">
               <ButCatalog />
-           
-              <button className="bntSecondary">Iniciar Sesión</button>
 
-              
-            </div>  
+              <ButLogin />
+            </div>
           </div>
         </div>
       </main>

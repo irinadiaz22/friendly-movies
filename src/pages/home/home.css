@@ -31,6 +31,7 @@
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 20px;
+  color: #e50914;
 }
 .hero p {
   font-size: 18px;
@@ -39,23 +40,21 @@
 }
 .buttons {
   display: flex;
-  gap: 20 px;
+  gap: 0px;
+  padding: 0px;
 }
-button {
+
+.btnSecondary {
+  background-color: #ffdad6;
+  color: #e50914;
   border: none;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
+  padding: 10px;
+  text-decoration: none; /* IMPORTANTE para quitar el subrayado */
+  display: inline-block; /* Para que se comporte como botón */
   margin: 10px;
-}
-.btnPrimary {
-  background-color: #e50914;
-  color: #ffdad6;
-  padding: 12px 24px;
-}
-.bntSecondary {
-  background-color: #ffdad6;
-  color: #e50914;
 }
 
 @media (max-width: 768px) {
