@@ -3,7 +3,7 @@ import "./home.css";
 import { NavBar } from "../../components/navBar/NavBar";
 import { Sidebar } from "../../components/sidebar/Sidebar";
 import { Footer } from "../../components/footer/Footer"
-import { Link } from "react-router-dom";
+import { ButCatalog } from "../../components/bottons/ButCatalog";
 
 export const Home = () => {
   return (
@@ -22,14 +22,12 @@ export const Home = () => {
             </p>
 
             <div className="buttons">
-              <Link to="/catalogo">
-                <button className="btnPrimary">Ver Catálogo</button>
-              </Link>
+              <ButCatalog />
            
               <button className="bntSecondary">Iniciar Sesión</button>
 
               
-            </div>
+            </div>  
           </div>
         </div>
       </main>

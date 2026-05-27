@@ -18,7 +18,7 @@ export const getMoviesTendencias = async () => {
         const data = await response.json();
 
         const sortedMovies = data.results.sort((a, b) => b.vote_average - a.vote_average);
-        const top5Movies = sortedMovies.slice(0, 6);
+        const top5Movies = sortedMovies.slice(0, 5);
 
         return top5Movies;
 
@@ -27,3 +27,15 @@ export const getMoviesTendencias = async () => {
         return [];
     }
 };
+
+export const getMovieById = async (id) => {
+    try {
+        const response = await fetch (`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
+        const data = await response.json();
+        return data;
+
+    } catch (error) {
+        console.error("Error al obtener la película", error);
+        return null;
+    }
+}

@@ -2,6 +2,7 @@ nav {
   display: flex;
   align-items: center;
   height: 60px;
+  background-color: #000;
 }
 .logoImg {
   width: 80px;
@@ -19,18 +20,17 @@ li {
   padding: 20px;
 }
 .login {
-  position: fixed;
+  display:block;
+  position: absolute;
   right: 0;
   padding: 20px;
+  align-items: center;
 }
 .icon {
   width: 30px;
   height: 30px;
 }
-.login {
-  display: flex;
-  align-items: center;
-}
+
 Link {
   color: #e50914;
 }
@@ -46,5 +46,5 @@ li:hover {
   .logoImg {
     max-width: 60px;
     max-height: 60px;
-}
+  }
 }
