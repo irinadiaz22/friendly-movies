@@ -16,10 +16,7 @@ export const NavBar = () => {
           <li>
             <Link to="/Catalogo">Catalogo</Link>
           </li>
-          <li>
-            <Link to="/">Busqueda</Link>
-          </li>
-            
+        
           
 
         </ul>

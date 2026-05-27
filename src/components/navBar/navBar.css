@@ -20,11 +20,10 @@ li {
   padding: 20px;
 }
 .login {
-  display:block;
+  display:flex;
   position: absolute;
   right: 0;
   padding: 20px;
-  align-items: center;
 }
 .icon {
   width: 30px;

@@ -27,15 +27,9 @@ export const FichaPelicula = () => {
 
       <div className="ficha-conteiner">
         <Sidebar />
-        <h1>{movie.title}</h1>
-
-        <div className="conteiner-ficha">
-          <img
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-            alt={movie.title}
-          />
-        </div>
+        
         <div className="conteiner-info">
+            <h1>{movie.title}</h1>
           <h3>Fecha de publicación: {movie.release_date} </h3>
           <h3>Puntuación: {movie.vote_average}/10 </h3>
           <h3>Sinopsis:</h3>
@@ -43,6 +37,14 @@ export const FichaPelicula = () => {
 
           <ButCatalog />
         </div>
+
+        <div className="conteiner-ficha">
+          <img
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            alt={movie.title}
+          />
+        </div>
+        
       </div>
     </div>
   );

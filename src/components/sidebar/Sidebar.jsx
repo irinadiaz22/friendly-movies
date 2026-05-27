@@ -20,7 +20,7 @@ export const Sidebar = () => {
         <ListaIcon className="icon" />
         <span>Catalogo</span>
       </Link>
-      
+   
       <Link className="sideItem">
         <ExploreIcon className="icon" />
         <span>Busqueda</span>

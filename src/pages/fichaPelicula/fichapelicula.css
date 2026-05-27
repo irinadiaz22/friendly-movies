@@ -17,7 +17,9 @@
 
 }
 h1 {
-  color: brown;
+  color: #e50914;
+  margin: 20px 0px;
+  font-size: 35px;
 }
 img {
   width: 300px;
